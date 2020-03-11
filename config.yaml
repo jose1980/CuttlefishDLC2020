@@ -1,0 +1,60 @@
+# Project definitions (do not edit)
+Task: small cuttlefish only
+scorer: '20200305'
+date: Mar5
+
+# Project path (change when moving around)
+project_path: D:\2020DLC\small cuttlefish only-20200305-2020-03-05
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  D:\2020DLC\small cuttlefish only-20200305-2020-03-05\videos\03052020_C1T1.avi:
+    crop: 0, 2048, 0, 2048
+  D:\2020DLC\small cuttlefish only-20200305-2020-03-05\videos\03052020_C2T1.avi:
+    crop: 0, 2048, 0, 2048
+  D:\2020DLC\small cuttlefish only-20200305-2020-03-05\videos\03052020_C3T1.avi:
+    crop: 0, 2048, 0, 2048
+  D:\2020DLC\small cuttlefish only-20200305-2020-03-05\videos\03052020_C4T1.avi:
+    crop: 0, 2048, 0, 2048
+bodyparts:
+- tip
+- lfeye
+- lreye
+- rfeye
+- rreye
+
+start: 0
+stop: 1
+numframes2pick: 300
+
+# Plotting configuration
+skeleton:
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: jet
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+resnet: 152
+snapshotindex: -1
+batch_size: 8
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+default_net_type: resnet_152
+default_augmenter: imgaug
