@@ -23,7 +23,7 @@ bodyparts:
 - rfeye
 - rreye
 
-start: 1000
+start: 0
 stop: 1
 numframes2pick: 300
 
